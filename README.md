@@ -51,7 +51,7 @@ This repo is a collection of my practice codes and projects while learning **Sel
 ---
 
 ## 🏆 Progress Tracker
-📅 I will keep updating this repo as I explore more features of Selenium.
+📅 I will keep updating this repo as I explore more features of Selenium.<br>
 Stay tuned for new scripts & improvements! 🚀
 
 ---
