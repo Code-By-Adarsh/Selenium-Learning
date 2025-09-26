@@ -15,7 +15,7 @@ This repo is a collection of my practice codes and projects while learning **Sel
 
 ---
 
-## ⚙️ Tech Stack  
+## ⚙️ Tech Stack 
 - ☕ **Java** (Core Java + OOPs concepts)  
 - 🕹️ **Selenium WebDriver**  
 - 🌍 **ChromeDriver / WebDrivers**  
