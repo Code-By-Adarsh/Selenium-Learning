@@ -47,6 +47,34 @@ public class TestNGFrameworkIntroduction {
          ✅ In short:
          TestNG is a Java testing framework that helps you write, organize, execute, and report test cases in a
          professional and scalable way.
+
+         -->Difference between WebDriverListener and ITestListener:
+         1. WebDriver Listener
+         Definition: A WebDriver Listener listens to events happening in the browser/webdriver, like clicking a button,
+         navigating to a page, or finding an element.
+         Where it’s used: In Selenium WebDriver.
+         Example interfaces/classes: WebDriverEventListener in Selenium.
+         Purpose:
+         To monitor actions performed by WebDriver.
+         Can be used for logging, debugging, or taking screenshots when certain browser actions occur.
+         Scope: Works at the browser/action level.
+         Example Use Case:
+         Log every click or input.
+         Take a screenshot whenever a NoSuchElementException occurs.
+
+         2. TestNG Listener
+         Definition: A TestNG Listener listens to events happening in test execution, like test start, test success,
+         test failure, or test skip.
+         Where it’s used: In TestNG framework for managing tests.
+         Example interfaces/classes: ITestListener, ISuiteListener, IInvokedMethodListener.
+         Purpose:
+         To customize or handle test execution behavior.
+         Can generate custom reports, logs, or perform actions on test pass/fail/skip.
+         Scope: Works at the test-case/test-suite level.
+         Example Use Case:
+         Send an email if a test fails.
+         Log test results.
+         Take screenshots on test failure (note: this could also use WebDriverListener if related to browser actions).
          */
     }
 }
