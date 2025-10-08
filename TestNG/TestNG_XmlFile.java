@@ -19,6 +19,7 @@ public class TestNG_XmlFile {
         Pass parameters from XML to Java code.
 
         --🧱 Basic Structure of testng.xml:
+        <?xml version="1.0" encoding="UTF-8"?>
         <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
         <suite name="My Test Suite">
         <test name="My Test">
