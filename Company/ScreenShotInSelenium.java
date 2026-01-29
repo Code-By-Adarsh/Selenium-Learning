@@ -6,12 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.apache.commons.io.FileUtils;
 
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import javax.imageio.ImageIO;
 import java.io.File;
 
-public class ScreenshotInSelenium {
+public class ScreenShotInSelenium {
     public static void main(String[] args) throws Exception{
         /*
 

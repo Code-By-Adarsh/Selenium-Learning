@@ -1,10 +1,9 @@
-package Company.Project1;
+package Projects.Project_2_AmazonTest;
 
-import com.beust.ah.A;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 import org.testng.annotations.Listeners;
@@ -12,8 +11,8 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-@Listeners(BaseListener.class)
-public class AmazonHomePageTest extends BaseTest{
+@Listeners(Company.Project1.BaseListener.class)
+public class AmazonHomePageTest extends Company.Project1.BaseTest {
     SoftAssert softAssert = new SoftAssert();
     public static void wait1(){
         try {
