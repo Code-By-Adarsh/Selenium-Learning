@@ -1,5 +1,3 @@
-package Company;
-
 import java.awt.*; // this package give related classes for mouse, keyboard and screen.
 import java.awt.event.KeyEvent; // this is for key codes of keyboard ex:A,enter.
 import java.awt.image.BufferedImage; //for storing image in memory.
