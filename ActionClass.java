@@ -61,8 +61,78 @@ public class ActionClass {
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         Actions actions = new Actions(driver);
+
+        /*
         WebElement element = driver.findElement(By.id("textbox"));
         actions.moveToElement(element).perform();
+         */
+
+        /*
+        📌 Topic 3: Click & Right Click (Context Click)
+        🔹 Left Click using Actions
+        actions.click(element).perform();
+        Why use this instead of element.click()?
+        When normal click fails due to JS/UI overlays
+         */
+
+        /*
+        WebElement element = driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/div[1]/button"));
+        actions.click(element).perform();
+         */
+
+        /*
+        🔹 Right Click
+        actions.contextClick(element).perform();
+        Used for:
+        Custom context menus
+        Admin panels
+        File managers
+         */
+
+        /*
+        WebElement element = driver.findElement(By.id("rightclick"));
+        actions.contextClick(element).perform();
+         */
+
+        /*
+        📌 Topic 4: Drag and Drop
+        🔹 Code
+        WebElement source = driver.findElement(By.id("drag"));
+        WebElement target = driver.findElement(By.id("drop"));
+        actions.dragAndDrop(source, target).perform();
+        🔹 Reality check (raw truth)
+        ⚠️ dragAndDrop() fails on many modern JS frameworks
+        In real projects:
+        You may need clickAndHold + moveToElement + release
+        🔹 Advanced version (more reliable)
+        actions.clickAndHold(source)
+       .moveToElement(target)
+       .release()
+       .perform();
+         */
+
+        /*
+        WebElement source = driver.findElement(By.id("draggableElement"));
+        WebElement target = driver.findElement(By.id("droppableElement"));
+        // actions.dragAndDrop(source,target).perform(); -> Not working
+        // actions.clickAndHold(source).moveToElement(target).release().perform();  -> Not working also
+         */
+
+        /*
+        📌 Topic 5: Dropdowns (IMPORTANT CLARITY)
+        ❌ Big misunderstanding many beginners have
+        Actions is NOT for normal dropdowns.
+        🔹 HTML <select> dropdown
+        Use Select class, NOT Actions:
+        Select select = new Select(dropdown);
+        select.selectByVisibleText("India");
+        🔹 When Actions is needed
+        Only when dropdown is:
+        Custom UI (div/li based)
+        Opens on hover or click
+        Then:
+        actions.moveToElement(dropdown).click(option).perform();
+         */
 
         wait1();
         driver.quit();
