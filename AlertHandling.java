@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class Handling_Alert {
+public class AlertHandling {
     public static void wait1(){
         try {
             Thread.sleep(2000);
@@ -30,7 +30,7 @@ public class Handling_Alert {
         3.Confirmation Alert:This type of alert comes with an option to accept or dismiss the alert.To accept
         alert ,Alert.accept() is used and for dismiss the alert Alert.dismiss() is used.
 
-        Methods under Action class:
+        Methods under Alert class:
         1.Driver.switchTo()->For going to alert from browser [driver.switchTo().alert();].
         2.Dismiss.alert()->For dismiss the alert by cancel button. [driver.switchTo().alert().dismiss();].
         3.Accept.alert()->For accept the alert by agree button. [driver.switchTo().alert().accept();].
@@ -40,7 +40,6 @@ public class Handling_Alert {
 
         //---------------------------------------------------------------------------------------------------------------
 
-        System.setProperty("webdriver.chrome.driver","C:\\selenium webdriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.selenium.dev/selenium/web/alerts.html#");
         driver.manage().window().maximize();
