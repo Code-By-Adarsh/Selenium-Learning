@@ -1,9 +1,10 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 public class ActionClass {
@@ -133,6 +134,69 @@ public class ActionClass {
         Then:
         actions.moveToElement(dropdown).click(option).perform();
          */
+
+        /*
+        📌 Topic 6: Keyboard Events
+        🔹 Example: CTRL + A, CTRL + C
+        actions.keyDown(Keys.CONTROL)
+        .sendKeys("a")
+        .keyUp(Keys.CONTROL)
+        .perform();
+
+        🔹 Real-world usage
+        Form automation
+        Copy-paste simulation
+        Accessibility testing
+         */
+
+        /*
+        📌 Topic 7: JavaScript Executor
+        🔹 Why JS Executor exists
+        Some elements:
+        Are hidden
+        Are blocked by UI layers
+        Don’t respond to Selenium clicks
+
+        JS Executor talks directly to browser DOM.
+        🔹 Syntax
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        🔹 Click using JS
+        js.executeScript("arguments[0].click();", element);
+
+        🔹 Scroll
+        js.executeScript("window.scrollBy(0,500)");
+
+        🔹 Raw truth (don’t ignore this)
+        ⚠️ JS Executor is a workaround, not first choice
+        Interviewers hate people who overuse it.
+         */
+
+        /*
+        WebElement element = driver.findElement(By.id("dblclick"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",element);
+         */
+
+        /*
+        📌 Topic 8: Taking Screenshot
+        🔹 Why screenshots matter
+        Debugging failures
+        Test reports
+        CI/CD pipelines
+
+        🔹 Code
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File src = ts.getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(src, new File("error.png"));
+         */
+
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File src = ts.getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(src, new File("practice.png"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         wait1();
         driver.quit();
