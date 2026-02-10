@@ -1,10 +1,8 @@
-package Company;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Handing_Exceptions {
+public class ExceptionHandling {
     public static void wait1(){
         try {
             Thread.sleep(2000);
@@ -34,7 +32,6 @@ public class Handing_Exceptions {
                              can be ignored during compilation.
          */
 
-        System.setProperty("webdriver.chrome.driver","C:\\selenium webdriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com");
         driver.manage().window().maximize();
