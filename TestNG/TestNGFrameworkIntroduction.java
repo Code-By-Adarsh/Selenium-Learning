@@ -1,4 +1,4 @@
-package Company;
+package TestNG;
 
 public class TestNGFrameworkIntroduction {
     public static void main(String[] args) {
